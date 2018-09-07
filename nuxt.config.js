@@ -7,7 +7,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'Welcome to Nuxt!',
+    title: 'tibsbag',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -27,6 +27,14 @@ module.exports = {
   build: {
     babel: {
       presets: ["@vue/app"]
-    }
-  }
+    },
+    vendor: [
+      'vuetify',
+      'material-design-icons-iconfont/dist/material-design-icons.css'
+    ]
+  },
+  plugins: [
+    '~/plugins/vuetify',
+    '~/plugins/material-design-icons'
+  ]
 }

@@ -12,6 +12,8 @@ import { setContext, getLocation, getRouteData } from './utils'
 
 
 /* Plugins */
+import nuxt_plugin_vuetify_165b1c58 from 'nuxt_plugin_vuetify_165b1c58' // Source: ../src/plugins/vuetify
+import nuxt_plugin_materialdesignicons_b188790a from 'nuxt_plugin_materialdesignicons_b188790a' // Source: ../src/plugins/material-design-icons
 
 
 // Component: <no-ssr>
@@ -133,6 +135,8 @@ async function createApp (ssrContext) {
 
   // Plugin execution
   
+  if (typeof nuxt_plugin_vuetify_165b1c58 === 'function') await nuxt_plugin_vuetify_165b1c58(app.context, inject)
+  if (typeof nuxt_plugin_materialdesignicons_b188790a === 'function') await nuxt_plugin_materialdesignicons_b188790a(app.context, inject)
   
 
   // If server-side, wait for async component to be resolved first
