@@ -1,4 +1,5 @@
 .nuxt/
+*.env
 
 .DS_Store
 node_modules

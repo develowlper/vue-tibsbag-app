@@ -3,6 +3,9 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
+const _18232604 = () => import('../src/pages/auth/sign-off.vue' /* webpackChunkName: "pages/auth/sign-off" */).then(m => m.default || m)
+const _58d05de6 = () => import('../src/pages/auth/sign-in.vue' /* webpackChunkName: "pages/auth/sign-in" */).then(m => m.default || m)
+const _7929dd32 = () => import('../src/pages/auth/signed-in.vue' /* webpackChunkName: "pages/auth/signed-in" */).then(m => m.default || m)
 const _f17cf42c = () => import('../src/pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
 
 
@@ -63,6 +66,21 @@ export function createRouter () {
     linkExactActiveClass: 'nuxt-link-exact-active',
     scrollBehavior,
     routes: [
+		{
+			path: "/auth/sign-off",
+			component: _18232604,
+			name: "auth-sign-off"
+		},
+		{
+			path: "/auth/sign-in",
+			component: _58d05de6,
+			name: "auth-sign-in"
+		},
+		{
+			path: "/auth/signed-in",
+			component: _7929dd32,
+			name: "auth-signed-in"
+		},
 		{
 			path: "/",
 			component: _f17cf42c,
