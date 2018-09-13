@@ -20,7 +20,8 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 ul {
@@ -37,11 +38,12 @@ a {
 </style>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
+import AppLogo from "~/components/AppLogo.vue";
 
 export default {
   components: {
     AppLogo
-  }
-}
+  },
+  middleware: "authenticated"
+};
 </script>

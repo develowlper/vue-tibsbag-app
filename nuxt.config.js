@@ -1,32 +1,45 @@
 module.exports = {
+  mode: 'spa',
   /*
-  ** Set source directory
-  */
+   ** Set source directory
+   */
   srcDir: 'src/',
   router: {
     middleware: 'check-auth'
   },
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
     title: 'tibsbag',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+    meta: [{
+        charset: 'utf-8'
+      },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Nuxt.js project'
+      }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{
+      rel: 'icon',
+      type: 'image/x-icon',
+      href: '/favicon.ico'
+    }]
   },
   /*
-  ** Customize the progress bar color
-  */
-  loading: { color: '#3B8070' },
+   ** Customize the progress bar color
+   */
+  loading: {
+    color: '#3B8070'
+  },
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
     babel: {
       presets: ['@vue/app']
