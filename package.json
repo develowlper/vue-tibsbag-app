@@ -15,8 +15,12 @@
     "heroku-postbuild": "yarn build"
   },
   "dependencies": {
+    "auth0-lock": "^11.9.1",
+    "js-cookie": "^2.2.0",
+    "jwt-decode": "^2.2.0",
     "material-design-icons-iconfont": "^3.0.3",
     "nuxt": "^1.4.0",
+    "uuid": "^3.3.2",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
     "vuetify": "^1.2.3",

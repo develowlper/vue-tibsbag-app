@@ -1,9 +1,12 @@
-import { setSecret } from './auth'
+import {
+  setSecret
+} from './auth'
+
+import config from '../../config.json'
 
 import uuid from 'uuid'
 
 const getLock = (options) => {
-  const config = require('../../config.json')
   const Auth0Lock = require('auth0-lock').default
   return new Auth0Lock(config.AUTH0_CLIENT_ID, config.AUTH0_CLIENT_DOMAIN, options)
 }
@@ -28,4 +31,6 @@ const getOptions = (container) => {
 }
 
 export const showLogin = (container) => getLock(getOptions(container)).show()
-export const logout = () => getLock().logout({ returnTo: getBaseUrl() })
+export const logout = () => getLock().logout({
+  returnTo: getBaseUrl()
+})
