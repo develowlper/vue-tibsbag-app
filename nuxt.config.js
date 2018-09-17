@@ -1,5 +1,7 @@
+require('dotenv').config()
+console.log(process.env)
+
 module.exports = {
-  mode: 'spa',
   /*
    ** Set source directory
    */
@@ -54,7 +56,10 @@ module.exports = {
     '~/plugins/material-design-icons'
   ],
   env: {
-    AUTH0_CLIENT_ID: '',
-    AUTH0_CLIENT_DOMAIN: ''
-  }
+    "AUTH0_CLIENT_ID": process.env.AUTH0_CLIENT_ID,
+    "AUTH0_CLIENT_DOMAIN": process.env.AUTH0_CLIENT_DOMAIN
+  },
+  modules: [
+    '@nuxtjs/dotenv',
+  ]
 }

@@ -120,7 +120,7 @@ export async function setContext(app, context) {
       payload: context.payload,
       error: context.error,
       base: '/',
-      env: {"AUTH0_CLIENT_ID":"","AUTH0_CLIENT_DOMAIN":""}
+      env: {"AUTH0_CLIENT_ID":"535LhFxLAxcOy9IZzy1vmyAbpYre4X32","AUTH0_CLIENT_DOMAIN":"tibsbag.eu.auth0.com"}
     }
     // Only set once
     if (context.req) app.context.req = context.req

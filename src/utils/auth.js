@@ -14,7 +14,10 @@ const getQueryParams = () => {
 
 export const extractInfoFromHash = () => {
   if (process.SERVER_BUILD) return;
-  const { id_token, state } = getQueryParams();
+  const {
+    id_token,
+    state
+  } = getQueryParams();
   return {
     token: id_token,
     secret: state
@@ -51,8 +54,6 @@ export const getUserFromLocalStorage = () => {
   const json = window.localStorage.user;
   return json ? JSON.parse(json) : undefined;
 };
-
-console.log(window);
 
 export const setSecret = secret =>
   window.localStorage.setItem("secret", secret);
